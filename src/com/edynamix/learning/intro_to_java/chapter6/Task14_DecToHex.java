@@ -1,16 +1,15 @@
 package com.edynamix.learning.intro_to_java.chapter6;
 
 public class Task14_DecToHex {
-
-	public static void main(String[] args) {
-		int n = 45;
+	
+	public static String decToHex(int decimal) {
 		String hex = "";
 		
-		while(n > 0) {
-			if (n % 16 <= 9) {
-				hex = n % 16 + hex;
+		while(decimal > 0) {
+			if (decimal % 16 <= 9) {
+				hex = decimal % 16 + hex;
 			} else {
-				switch (n % 16) {
+				switch (decimal % 16) {
 				case 10: hex = 'A' + hex; break;
 				case 11: hex = 'B' + hex; break;
 				case 12: hex = 'C' + hex; break;
@@ -20,8 +19,16 @@ public class Task14_DecToHex {
 				}
 			}
 			
-			n = n / 16;
+			decimal = decimal / 16;
 		}
+		
+		return hex;
+	}
+
+	public static void main(String[] args) {
+		int decimal = 45;
+		String hex = decToHex(decimal);
+		
 		System.out.println(hex);
 	}
 

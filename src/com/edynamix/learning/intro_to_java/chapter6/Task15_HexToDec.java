@@ -1,9 +1,8 @@
 package com.edynamix.learning.intro_to_java.chapter6;
 
 public class Task15_HexToDec {
-
-	public static void main(String[] args) {
-		String hex = "2D";
+	
+	public static int hexToDecimal(String hex) {
 		char[] arr = hex.toCharArray();
 		int dec = 0;
 		
@@ -20,8 +19,15 @@ public class Task15_HexToDec {
 				case 'F': dec += 15 * Math.pow(16, arr.length - 1 - i); break;
 				}
 			}
-			
 		}
+		
+		return dec;
+	}
+
+	public static void main(String[] args) {
+		String hex = "2D";
+		int dec = hexToDecimal(hex);
+		
 		System.out.println(dec);
 	}
 
