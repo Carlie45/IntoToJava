@@ -20,6 +20,7 @@ public class Task9_ChooseTask {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Choose task from 1-3: ");
 		int taskIndex = sc.nextInt();
+		sc.close();
 		if (taskIndex < 1 || taskIndex > 3) {
 			System.err.println("Invalid task id!");
 			return;
@@ -48,7 +49,6 @@ public class Task9_ChooseTask {
 			}
 			System.out.println(solveLineralEquasion(a, b));
 		}
-		sc.close();
 	}
 
 }

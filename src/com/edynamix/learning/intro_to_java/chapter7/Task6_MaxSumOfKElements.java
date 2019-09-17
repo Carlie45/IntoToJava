@@ -12,6 +12,7 @@ public class Task6_MaxSumOfKElements {
 		
 		System.out.print("k = ");
 		int k = sc.nextInt();
+		sc.close();
 		
 		if (k > n || k < 0 || n < 0) {
 			System.err.println("Invalid input.");
@@ -33,7 +34,6 @@ public class Task6_MaxSumOfKElements {
 			sum += arr[n - i - 1];
 		}
 		System.out.println("Max sum is " + sum);
-		sc.close();
-	}
 
+	}
 }

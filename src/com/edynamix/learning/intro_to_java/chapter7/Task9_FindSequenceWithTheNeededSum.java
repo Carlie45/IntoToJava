@@ -9,6 +9,7 @@ public class Task9_FindSequenceWithTheNeededSum {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("s = ");
 		int targetSum = sc.nextInt();
+		sc.close();
 
 		int currentSum = 0;
 		int startIndex = 0;
@@ -29,7 +30,6 @@ public class Task9_FindSequenceWithTheNeededSum {
 			}
 		}
 		System.out.println("No matching sequence.");
-		sc.close();
 	}
 
 }

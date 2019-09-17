@@ -33,10 +33,11 @@ public class Operators {
 		System.out.println("Area = " + ((a + b) * h / 2.0));
 		
 		//7.
-//		Scanner input = new Scanner(System.in);
-//		System.out.print("Enter number:");
-//		int weight = input.nextInt();
-//		System.out.println(weight * 0.83);
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter number:");
+		int weight = input.nextInt();
+		System.out.println(weight * 0.83);
+		input.close();
 
 		//8.
 		int x = 3;

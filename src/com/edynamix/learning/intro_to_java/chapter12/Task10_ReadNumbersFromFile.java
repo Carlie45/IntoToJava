@@ -2,9 +2,9 @@ package com.edynamix.learning.intro_to_java.chapter12;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import com.edynamix.learning.intro_to_java.chapter12.FileParseException;
 
 public class Task10_ReadNumbersFromFile {
 

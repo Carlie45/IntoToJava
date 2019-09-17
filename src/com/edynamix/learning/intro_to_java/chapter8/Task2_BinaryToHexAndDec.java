@@ -1,7 +1,5 @@
 package com.edynamix.learning.intro_to_java.chapter8;
 
-import java.util.Arrays;
-
 import com.edynamix.learning.intro_to_java.chapter6.Task13_BinaryToDec;
 import com.edynamix.learning.intro_to_java.chapter6.Task14_DecToHex;
 
