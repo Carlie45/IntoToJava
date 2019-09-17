@@ -8,6 +8,7 @@ public class Task3_PrintMinAndMax {
 		System.out.println("Enter how many numbers: ");
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
+		sc.close();
 		int min = Integer.MAX_VALUE;
 		int max = Integer.MIN_VALUE;
 		int current;

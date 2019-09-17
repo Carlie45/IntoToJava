@@ -8,37 +8,38 @@ public class Task4_OneDigitName {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter number between 0 and 9:");
 		int number = sc.nextInt();
+		sc.close();
 
 		switch (number) {
 		case 0:
-			System.out.print("нула");
+			System.out.print("пїЅпїЅпїЅпїЅ");
 			break;
 		case 1:
-			System.out.print("едно");
+			System.out.print("пїЅпїЅпїЅпїЅ");
 			break;
 		case 2:
-			System.out.print("две");
+			System.out.print("пїЅпїЅпїЅ");
 			break;
 		case 3:
-			System.out.print("три");
+			System.out.print("пїЅпїЅпїЅ");
 			break;
 		case 4:
-			System.out.print("четири");
+			System.out.print("пїЅпїЅпїЅпїЅпїЅпїЅ");
 			break;
 		case 5:
-			System.out.print("пет");
+			System.out.print("пїЅпїЅпїЅ");
 			break;
 		case 6:
-			System.out.print("шест");
+			System.out.print("пїЅпїЅпїЅпїЅ");
 			break;
 		case 7:
-			System.out.print("седем");
+			System.out.print("пїЅпїЅпїЅпїЅпїЅ");
 			break;
 		case 8:
-			System.out.print("осем");
+			System.out.print("пїЅпїЅпїЅпїЅ");
 			break;
 		case 9:
-			System.out.print("девет");
+			System.out.print("пїЅпїЅпїЅпїЅпїЅ");
 			break;
 		}
 	}

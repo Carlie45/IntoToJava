@@ -88,6 +88,8 @@ public class ConsoleInputOutput {
 			}
 		}
 		System.out.printf("The max is: %f.", max);
+		
+		sc.close();
 	}
 
 }

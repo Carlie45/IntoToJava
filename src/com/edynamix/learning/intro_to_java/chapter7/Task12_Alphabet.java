@@ -22,7 +22,7 @@ public class Task12_Alphabet {
 				}
 			}
 		}
-
+		sc.close();
 	}
 
 }

@@ -10,6 +10,7 @@ public class Task6_NFactOverKFact {
 		int k = sc.nextInt();
 		System.out.print("n = ");
 		int n = sc.nextInt();
+		sc.close();
 		
 		int prod = 1;
 		for (int i = k + 1; i <= n; i++) {

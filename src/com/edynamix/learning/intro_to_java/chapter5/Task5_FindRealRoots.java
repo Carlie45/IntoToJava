@@ -12,6 +12,7 @@ public class Task5_FindRealRoots {
 		double b1 = sc.nextDouble();
 		System.out.print("c = ");
 		double c1 = sc.nextDouble();
+		sc.close();
 
 		boolean canDbeFound = (b1 * b1) >= (4 * a1 * c1);
 		double D = Math.sqrt(b1 * b1 - 4 * a1 * c1);

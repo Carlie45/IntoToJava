@@ -72,6 +72,7 @@ public class Task11_MaxSumInSubmatrix {
 		}
 		
 		System.out.println("Max sum of submatrix: " + maxSubmatrixSum);
+		sc.close();
 	}
 
 }

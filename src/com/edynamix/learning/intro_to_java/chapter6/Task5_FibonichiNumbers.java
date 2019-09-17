@@ -8,6 +8,7 @@ public class Task5_FibonichiNumbers {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("n = ");
 		int n = sc.nextInt();
+		sc.close();
 		int firstNum = 0;
 		int secondNum = 1;
 		int current;

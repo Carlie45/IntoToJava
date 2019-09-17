@@ -15,7 +15,7 @@ public class Task10_Matrix {
 			}
 			System.out.println();
 		}
-
+		sc.close();
 	}
 
 }

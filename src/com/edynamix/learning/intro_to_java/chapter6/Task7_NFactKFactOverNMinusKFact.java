@@ -18,6 +18,7 @@ public class Task7_NFactKFactOverNMinusKFact {
 		int k = sc.nextInt();
 		System.out.print("n = ");
 		int n = sc.nextInt();
+		sc.close();
 		
 		long res = factorial(n) * factorial(k) / factorial(n - k);
 		System.out.println(res);

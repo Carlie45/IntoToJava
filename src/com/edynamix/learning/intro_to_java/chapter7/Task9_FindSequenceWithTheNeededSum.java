@@ -29,7 +29,7 @@ public class Task9_FindSequenceWithTheNeededSum {
 			}
 		}
 		System.out.println("No matching sequence.");
-
+		sc.close();
 	}
 
 }

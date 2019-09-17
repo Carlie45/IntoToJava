@@ -14,6 +14,8 @@ public class Task2_TriangleHypotenuse {
 		
 		double hypotenuse = Math.sqrt(sideA * sideA + sideB * sideB);
 		System.out.println("c = " + hypotenuse);
+		
+		sc.close();
 	}
 
 }

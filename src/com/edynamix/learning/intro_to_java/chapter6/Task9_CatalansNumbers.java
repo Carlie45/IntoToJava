@@ -8,6 +8,7 @@ public class Task9_CatalansNumbers {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("n = ");
 		int n = sc.nextInt();
+		sc.close();
 
 		double catNumber = 1;
 		long last2n = 2;

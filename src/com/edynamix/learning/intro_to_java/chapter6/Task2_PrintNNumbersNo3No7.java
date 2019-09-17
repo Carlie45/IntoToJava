@@ -14,6 +14,7 @@ public class Task2_PrintNNumbersNo3No7 {
 			}
 			System.out.print(i + " ");
 		}
+		sc.close();
 	}
 
 }

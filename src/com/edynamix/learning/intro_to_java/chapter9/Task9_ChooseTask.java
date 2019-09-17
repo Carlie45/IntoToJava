@@ -48,6 +48,7 @@ public class Task9_ChooseTask {
 			}
 			System.out.println(solveLineralEquasion(a, b));
 		}
+		sc.close();
 	}
 
 }

@@ -33,6 +33,7 @@ public class Task6_MaxSumOfKElements {
 			sum += arr[n - i - 1];
 		}
 		System.out.println("Max sum is " + sum);
+		sc.close();
 	}
 
 }

@@ -41,6 +41,7 @@ public class Task2_SameArrays {
 		}
 		
 		System.out.println(areArraysTheSame);
+		sc.close();
 	}
 
 }
