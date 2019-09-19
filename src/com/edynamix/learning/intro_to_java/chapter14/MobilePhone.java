@@ -1,5 +1,8 @@
 package com.edynamix.learning.intro_to_java.chapter14;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MobilePhone {
 
 	private String model;
@@ -9,10 +12,13 @@ public class MobilePhone {
 	private Battery battery;
 	private Display display;
 	
+	private List<Call> callHistory;
+	
 	private static MobilePhone nokiaN95 = new MobilePhone("nokiaN95");
 	
 	public MobilePhone() {
 		super();
+		callHistory = new ArrayList<>();
 	}
 	
 	public MobilePhone(String model) {
@@ -104,5 +110,35 @@ public class MobilePhone {
 		MobilePhone.nokiaN95 = nokiaN95;
 	}
 
+	public List<Call> getCallHistory() {
+		return callHistory;
+	}
+
+	public boolean addCallInHistory(Call call) {
+		return callHistory.add(call);
+	}
 	
+	public boolean deleteCallFromHistory(Call call) {
+		return callHistory.remove(call);
+	}
+	
+	public void deleteFullCallHistory() {
+		callHistory.clear();
+	}
+	
+	public double getPriceForCallHistory(double pricePerCall) {
+		return callHistory.size() * pricePerCall;
+	}
+	
+	public Call getLongestCall() {
+		Call longest = new Call();
+		
+		for (Call c : this.getCallHistory()) {
+			if (c.getCallDuration() > longest.getCallDuration()) {
+				longest = c;
+			}
+		}
+		
+		return longest;
+	}
 }
