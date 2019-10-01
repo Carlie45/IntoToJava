@@ -1,9 +1,9 @@
 package com.edynamix.learning.intro_to_java.chapter16.task1;
 
 public class Node {
-	Object elem;
-	Node next;
-	Node prev;
+	public Object elem;
+	public Node next;
+	public Node prev;
 	
 	Node(Object elem, Node next, Node prev) {
 		this.elem = elem;

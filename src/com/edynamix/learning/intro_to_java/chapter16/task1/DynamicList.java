@@ -69,7 +69,7 @@ public class DynamicList {
 		return -1;
 	}
 
-	public Object elemAt(int index) {
+	public Node elemAt(int index) {
 		if (index == 0) {
 			return head;
 		} else if (index == count - 1) {
@@ -81,10 +81,10 @@ public class DynamicList {
 				current = current.next;
 				currentIndex++;
 			}
-			return current.elem;
+			return current;
 		}
 	}
-	
+
 	public void insertAtIndex(int index, Object elem) {
 		count++;
 		if (index == 0) {
@@ -127,7 +127,16 @@ public class DynamicList {
 		}
 		return arr;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "DynamicList{" +
+				"head=" + head +
+				", tail=" + tail +
+				", count=" + count +
+				'}';
+	}
+
 	public static void main(String[] args) {
 		DynamicList list = new DynamicList();
 		list.add(1);
@@ -147,7 +156,7 @@ public class DynamicList {
 		list.insertAtIndex(3, 3);
 		list.printList();
 		
-		System.out.println(list.elemAt(3));
+		System.out.println(list.elemAt(3).elem);
 		System.out.println(Arrays.toString(list.toArray()));
 	}
 
