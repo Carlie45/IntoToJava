@@ -1,18 +1,18 @@
-package com.edynamix.learning.intro_to_java.chapter16;
+package com.edynamix.learning.intro_to_java.chapter16.task3;
 
-public class Task3_Node {
+public class Node {
 
     Object elem;
-    Task3_Node prev;
-    Task3_Node next;
+    Node prev;
+    Node next;
     boolean isAddedFromHead;
 
-    public Task3_Node(Object elem, boolean isAddedFromHead) {
+    public Node(Object elem, boolean isAddedFromHead) {
         this.elem = elem;
         this.isAddedFromHead = isAddedFromHead;
     }
 
-    public Task3_Node(Object elem, Task3_Node prev, Task3_Node next, boolean isAddedFromHead) {
+    public Node(Object elem, Node prev, Node next, boolean isAddedFromHead) {
         this.elem = elem;
         this.prev = prev;
         this.next = next;

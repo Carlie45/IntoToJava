@@ -1,20 +1,20 @@
-package com.edynamix.learning.intro_to_java.chapter16;
+package com.edynamix.learning.intro_to_java.chapter16.task1;
 
 import java.util.Arrays;
 
-public class Task1_DynamicList {
+public class DynamicList {
 	
-	private Task1_Node head;
-	private Task1_Node tail;
+	private Node head;
+	private Node tail;
 	private int count;
 	
 	public void add(Object item) {
 		if (head == null) {
 			// The list is empty;
-			head = new Task1_Node(item);
+			head = new Node(item);
 			tail = head;
 		} else {
-			Task1_Node node = new Task1_Node(item, null, tail);
+			Node node = new Node(item, null, tail);
 			tail.next = node;
 			tail = node;
 		}
@@ -27,7 +27,7 @@ public class Task1_DynamicList {
 		}
 		
 		int currentIndex = 0;
-		Task1_Node current = head;
+		Node current = head;
 		while(currentIndex < index) {
 			current = current.next;
 			currentIndex++;
@@ -56,7 +56,7 @@ public class Task1_DynamicList {
 	
 	public int indexOf(Object elem) {
 		int index = 0;
-		Task1_Node current = head;
+		Node current = head;
 		while(current != null) {
 			if ((current.elem == null && elem == null) 
 					|| (current.elem != null && current.elem.equals(elem))) {
@@ -76,7 +76,7 @@ public class Task1_DynamicList {
 			return tail;
 		} else {
 			int currentIndex = 0;
-			Task1_Node current = head;
+			Node current = head;
 			while (currentIndex < index) {
 				current = current.next;
 				currentIndex++;
@@ -88,15 +88,15 @@ public class Task1_DynamicList {
 	public void insertAtIndex(int index, Object elem) {
 		count++;
 		if (index == 0) {
-			Task1_Node node = new Task1_Node(elem, head, null);
+			Node node = new Node(elem, head, null);
 			head.prev = node;
 			head = node;
 		} else if (index == count - 1){
 			add(elem);
 			count--; // it was added in the add method too.
 		} else {
-			Task1_Node node = new Task1_Node(elem);
-			Task1_Node current = head;
+			Node node = new Node(elem);
+			Node current = head;
 			int currentIndex = 0;
 			while(currentIndex < index) {
 				current = current.next;
@@ -108,7 +108,7 @@ public class Task1_DynamicList {
 	}
 	
 	public void printList() {
-		Task1_Node current = head;
+		Node current = head;
 		while (current != null) {
 			System.out.print(current.elem + " ");
 			current = current.next;
@@ -118,7 +118,7 @@ public class Task1_DynamicList {
 	
 	public Object[] toArray() {
 		Object[] arr = new Object[count];
-		Task1_Node current = head;
+		Node current = head;
 		int index = 0;
 		while (current != null) {
 			arr[index] = current.elem;
@@ -129,7 +129,7 @@ public class Task1_DynamicList {
 	}
 	
 	public static void main(String[] args) {
-		Task1_DynamicList list = new Task1_DynamicList();
+		DynamicList list = new DynamicList();
 		list.add(1);
 		list.add(2);
 		list.add(3);

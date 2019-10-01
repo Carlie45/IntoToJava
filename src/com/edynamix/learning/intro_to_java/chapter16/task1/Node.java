@@ -1,17 +1,17 @@
-package com.edynamix.learning.intro_to_java.chapter16;
+package com.edynamix.learning.intro_to_java.chapter16.task1;
 
-public class Task1_Node {
+public class Node {
 	Object elem;
-	Task1_Node next;
-	Task1_Node prev;
+	Node next;
+	Node prev;
 	
-	Task1_Node(Object elem, Task1_Node next, Task1_Node prev) {
+	Node(Object elem, Node next, Node prev) {
 		this.elem = elem;
 		this.next = next;
 		this.prev = prev;
 	}
 	
-	Task1_Node(Object item) {
+	Node(Object item) {
 		this.elem = item;
 		next = null;
 		prev = null;

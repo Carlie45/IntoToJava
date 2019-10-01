@@ -1,17 +1,17 @@
-package com.edynamix.learning.intro_to_java.chapter16;
+package com.edynamix.learning.intro_to_java.chapter16.task2;
 
 import java.util.Arrays;
 
-public class Task2_DynamicStack {
+public class DynamicStack {
 	
-	private Task2_Node top;
+	private Node top;
 	private int count;
 	
 	public void push(Object elem) {
 		if (top == null) {
-			top = new Task2_Node(elem, null);
+			top = new Node(elem, null);
 		} else {
-			Task2_Node current = new Task2_Node(elem, top);
+			Node current = new Node(elem, top);
 			top = current;
 		}
 		count++;
@@ -39,7 +39,7 @@ public class Task2_DynamicStack {
 	
 	public Object[] toArray() {
 		Object[] arr = new Object[count];
-		Task2_Node current = top;
+		Node current = top;
 		int index = 0;
 		while (index < count) {
 			arr[index] = current.elem;
@@ -60,7 +60,7 @@ public class Task2_DynamicStack {
 	}
 	
 	public boolean contains(Object elem) {
-		Task2_Node current = top;
+		Node current = top;
 		while (current != null) {
 			if (current.elem.equals(elem)) {
 				return true;
@@ -76,7 +76,7 @@ public class Task2_DynamicStack {
 	}
 
 	public static void main(String[] args) {
-		Task2_DynamicStack stack = new Task2_DynamicStack();
+		DynamicStack stack = new DynamicStack();
 		stack.push(1);
 		stack.push(2);
 		stack.push(3);

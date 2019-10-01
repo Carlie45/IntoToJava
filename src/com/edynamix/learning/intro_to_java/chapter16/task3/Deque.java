@@ -1,16 +1,16 @@
-package com.edynamix.learning.intro_to_java.chapter16;
+package com.edynamix.learning.intro_to_java.chapter16.task3;
 
-public class Task3_Deque {
+public class Deque {
 
-    private Task3_Node head;
-    private Task3_Node tail;
+    private Node head;
+    private Node tail;
 
     public void addElemAtHead(Object elem) {
         if (head == null) { // The deque is empty.
-            head = new Task3_Node(elem, true);
+            head = new Node(elem, true);
             tail = head;
         } else {
-            Task3_Node current = new Task3_Node(elem, true);
+            Node current = new Node(elem, true);
             current.next = head;
             head.prev = current;
             head = current;
@@ -19,24 +19,24 @@ public class Task3_Deque {
 
     public void addElemAtTail(Object elem) {
         if (head == null) { // The deque is empty.
-            head = new Task3_Node(elem, false);
+            head = new Node(elem, false);
             tail = head;
         } else {
-            Task3_Node current = new Task3_Node(elem, false);
+            Node current = new Node(elem, false);
             current.prev = tail;
             tail.next = current;
             tail = current;
         }
     }
 
-    public Object removeElemFromHead() throws Task3_IllegalOperationException {
-        Task3_Node removedElem = null;
+    public Object removeElemFromHead() throws IllegalOperationException {
+        Node removedElem = null;
         if (head == null) { // The deque is empty, so nothing to return.
             return null;
         }
         removedElem = head;
         if (!removedElem.isAddedFromHead) {
-            throw new Task3_IllegalOperationException("The element cannot be removed from the head, because it was not added from this side.");
+            throw new IllegalOperationException("The element cannot be removed from the head, because it was not added from this side.");
         }
         if (!head.hasNext()) { // The deque had only one element.
             head = tail = null;
@@ -48,14 +48,14 @@ public class Task3_Deque {
         return removedElem.elem;
     }
 
-    public Object removeElemFromTail() throws Task3_IllegalOperationException {
-        Task3_Node removedElem = null;
+    public Object removeElemFromTail() throws IllegalOperationException {
+        Node removedElem = null;
         if (head == null) { // The deque is empty, so nothing to return.
             return null;
         }
         removedElem = tail;
         if (removedElem.isAddedFromHead) {
-            throw new Task3_IllegalOperationException("The element cannot be removed from the tail, because it was not added from this side.");
+            throw new IllegalOperationException("The element cannot be removed from the tail, because it was not added from this side.");
         }
         if (!tail.hasPrev()) { // The deque had only one element.
             head = tail = null;
@@ -68,7 +68,7 @@ public class Task3_Deque {
     }
 
     public void clear() {
-        Task3_Node current = head;
+        Node current = head;
 
         try {
             while(current != null && current.isAddedFromHead) {
@@ -80,14 +80,14 @@ public class Task3_Deque {
                 removeElemFromTail();
                 current = current.prev;
             }
-        } catch (Task3_IllegalOperationException ioe) {
+        } catch (IllegalOperationException ioe) {
             ioe.printStackTrace();
         }
     }
 
     public void print() {
         System.out.print("Deque = [ ");
-        Task3_Node current = head;
+        Node current = head;
         while(current != null) {
             System.out.print(current.elem + " ");
             current = current.next;
@@ -96,7 +96,7 @@ public class Task3_Deque {
     }
 
     public static void main(String[] args) {
-        Task3_Deque deque = new Task3_Deque();
+        Deque deque = new Deque();
         deque.addElemAtHead(3);
         deque.addElemAtHead(2);
         deque.addElemAtHead(1);

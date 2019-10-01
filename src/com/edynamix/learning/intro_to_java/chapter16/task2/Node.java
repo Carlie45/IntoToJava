@@ -1,11 +1,11 @@
-package com.edynamix.learning.intro_to_java.chapter16;
+package com.edynamix.learning.intro_to_java.chapter16.task2;
 
-public class Task2_Node {
+public class Node {
 	
 	Object elem;
-	Task2_Node prev;
+	Node prev;
 	
-	public Task2_Node(Object elem, Task2_Node prev) {
+	public Node(Object elem, Node prev) {
 		this.elem = elem;
 		this.prev = prev;
 	}
