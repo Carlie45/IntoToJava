@@ -8,8 +8,6 @@ public class Task1_DynamicList {
 	private Task1_Node tail;
 	private int count;
 	
-
-	
 	public void add(Object item) {
 		if (head == null) {
 			// The list is empty;
