@@ -1,4 +1,4 @@
-package com.edynamix.learning.intro_to_java.chapter20;
+package com.edynamix.learning.intro_to_java.chapter20.task4;
 
 public class ShapesTester {
 
